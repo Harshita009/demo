@@ -1,0 +1,175 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pragathi Power — Energy & Smart Mobility</title>
+<link rel="icon" type="image/x-icon" href="{% static 'images/favicon.ico' %}">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+<link href="{% static 'css/global.css' %}" rel="stylesheet">
+<link href="{% static 'css/home.css' %}" rel="stylesheet">
+</head>
+<body>
+
+<div class="gr-cursor" id="gr-cursor"></div>
+<div class="gr-cursor-trail" id="gr-cursor-trail"></div>
+<canvas id="gr-particles"></canvas>
+<div id="gr-scroll-line"></div>
+<div id="gr-nav-placeholder"></div>
+<div class="side-buttons">
+  <a href="{% url 'client_enquiry' %}" class="side-btn">
+   
+    <span>Client Enquiry</span>
+  </a>
+
+  <a href="{% url 'vendor-registration' %}" class="side-btn">
+    
+    <span>Vendor Registration</span>
+  </a>
+
+  <a href="{% url 'contact' %}" class="side-btn">
+   
+    <span>Investment</span>
+  </a>
+ <a href="{% url 'primary_application' %}" class="side-btn">
+    <span>Field Inspector </span>
+</a>
+</div>
+
+<!-- HERO SECTION -->
+<section id="home-hero"> 
+  <div class="hero-grid-bg"></div>
+  <div class="container position-relative py-5">
+    <div class="row align-items-center min-vh-100">
+      <div class="col-lg-6">
+        <div class="hero-badge hero-seq">
+          <span class="dot"></span>LIVE — Karnataka, India
+        </div>
+        <h1 class="hero-title hero-seq">
+          <span class="t-gr">PRAGATHI</span><br>
+          <span class="t-en">POWER</span><br>
+          <span class="t-sm">Energy &amp; Smart Mobility</span>
+        </h1>
+        <p class="hero-tagline hero-seq">SOLAR POWER GENERATION · EV CHARGING INFRASTRUCTURE · GREEN MOBILITY</p>
+        <p class="hero-desc hero-seq">
+          Pragathi Power integrates renewable power generation with electric transportation infrastructure — a self-sustaining ecosystem where clean energy directly fuels public mobility solutions across 5 strategic locations in India, totaling 2,075 MW capacity.
+        </p>
+        <div class="hero-stats hero-seq">
+          <div class="text-center">
+            <span class="stat-num gr-counter" data-target="8306">0</span>
+            <span class="stat-label">ACRES</span>
+          </div>
+          <div class="text-center">
+            <span class="stat-num gr-counter" data-target="6362">0</span>
+            <span class="stat-label">EV CHARGERS</span>
+          </div>
+          <div class="text-center">
+            <span class="stat-num gr-counter" data-target="2075">0</span>
+            <span class="stat-label">MW CAPACITY</span>
+          </div>
+          <div class="text-center">
+            <span class="stat-num">2026</span>
+            <span class="stat-label">LAUNCH YEAR</span>
+          </div>
+        </div>
+        <div class="d-flex flex-wrap gap-3 hero-seq">
+          <a href="{% url 'about' %}" class="gr-btn-primary">Explore Ecosystem</a>
+          <a href="{% url 'contact' %}" class="gr-btn-outline">Partner With Us</a>
+        </div>
+      </div>
+      
+      <!-- ECOSYSTEM CIRCLE - CORRECTED ALIGNMENT -->
+      <div class="col-lg-6 d-flex justify-content-center mt-5 mt-lg-0">
+        <div class="eco-wrap">
+          <!-- Inner rotating rings -->
+          <div class="eco-ring"></div>
+          <div class="eco-ring2"></div>
+          
+          <!-- Center node -->
+          <div class="eco-center">
+            <i class="fas fa-leaf"></i>
+            <span>PRAGATHI</span>
+          </div>
+          
+          <!-- Outer nodes - Properly positioned around the circle -->
+          <div class="eco-node n-solar">
+            <i class="fas fa-sun"></i>
+            <span>Solar</span>
+          </div>
+          <div class="eco-node n-wind">
+            <i class="fas fa-wind"></i>
+            <span>Wind</span>
+          </div>
+          <div class="eco-node n-grid">
+            <i class="fas fa-plug"></i>
+            <span>Grid</span>
+          </div>
+          <div class="eco-node n-rev">
+            <i class="fas fa-chart-line"></i>
+            <span>Revenue</span>
+          </div>
+          <div class="eco-node n-charge">
+            <i class="fas fa-charging-station"></i>
+            <span>Charging</span>
+          </div>
+          <div class="eco-node n-ev">
+            <i class="fas fa-bus-alt"></i>
+            <span>EV Fleet</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="gr-divider"></div>
+
+<!-- QUICK OVERVIEW CARDS -->
+<section class="sec-navy">
+  <div class="container">
+    <div class="text-center mb-5 fade-up">
+      <span class="gr-section-label"><i class="fas fa-seedling me-2"></i>What We Do</span>
+      <h2 class="gr-section-title">The <span class="t-gold">Pragathi Power</span> Model</h2>
+      <div class="gr-title-line"></div>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-4 fade-up">
+        <div class="gr-feat-card">
+          <div class="gr-icon-wrap iw-gold"><i class="fas fa-bolt"></i></div>
+          <div class="gr-card-title">Clean Energy Generation</div>
+          <div class="gr-card-desc">Solar & wind power generating revenue that funds the entire mobility ecosystem sustainably across 2,075 MW capacity.</div>
+          <a href="{% url 'solar-thoothukudi' %}" class="card-link">Learn More →</a>
+        </div>
+      </div>
+      <div class="col-md-4 fade-up" style="transition-delay:.15s">
+        <div class="gr-feat-card c-green">
+          <div class="gr-icon-wrap iw-green"><i class="fas fa-charging-station"></i></div>
+          <div class="gr-card-title">EV Charging Hub</div>
+          <div class="gr-card-desc">6,362 fast chargers, battery swapping & smart management — powering India's electric future.</div>
+          <a href="{% url 'charging' %}" class="card-link c-green-link">Learn More →</a>
+        </div>
+      </div>
+      <div class="col-md-4 fade-up" style="transition-delay:.3s">
+        <div class="gr-feat-card c-cyan">
+          <div class="gr-icon-wrap iw-cyan"><i class="fas fa-bus-alt"></i></div>
+          <div class="gr-card-title">Smart EV Mobility</div>
+          <div class="gr-card-desc">750+ EV fleet powered by renewable energy connecting rural communities affordably.</div>
+          <a href="{% url 'mobility' %}" class="card-link c-cyan-link">Learn More →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<div id="gr-footer-placeholder"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+<script src="{% static 'js/layout.js' %}"></script>
+<script src="{% static 'js/global.js' %}"></script>
+<script src="{% static 'js/home.js' %}"></script>
+</body>
+</html>
